@@ -1,0 +1,45 @@
+.osec-intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; 
+  z-index: 9998;
+  overflow: hidden;
+}
+.osprey-sprite-flying {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  image-rendering: pixelated;
+  z-index: 1000;
+  animation: typewriterFlight 30s linear infinite;
+}
+@keyframes typewriterFlight {
+  /* --- PASS 1 --- */
+  0%    { left: -100px; top: 120px; opacity: 1; }
+  19%   { left: 100vw;  top: 120px; opacity: 1; }
+  19.01% { left: -100px; top: 240px; opacity: 0; }
+
+  /* --- PASS 2 --- */
+  20%   { left: -100px; top: 240px; opacity: 1; }
+  39%   { left: 100vw;  top: 240px; opacity: 1; }
+  39.01% { left: -100px; top: 360px; opacity: 0; }
+
+  /* --- PASS 3 --- */
+  40%   { left: -100px; top: 360px; opacity: 1; }
+  59%   { left: 100vw;  top: 360px; opacity: 1; }
+  59.01% { left: -100px; top: 480px; opacity: 0; }
+
+  /* --- PASS 4 --- */
+  60%   { left: -100px; top: 480px; opacity: 1; }
+  79%   { left: 100vw;  top: 480px; opacity: 1; }
+  79.01% { left: -100px; top: 600px; opacity: 0; }
+
+  /* --- PASS 5 --- */
+  80%   { left: -100px; top: 600px; opacity: 1; }
+  99%   { left: 100vw;  top: 600px; opacity: 1; }
+  99.01% { left: -100px; top: 120px; opacity: 0; }
+  100%  { left: -100px; top: 120px; opacity: 1; }
+}

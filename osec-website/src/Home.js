@@ -1,8 +1,37 @@
 import React, {useEffect, useState} from 'react';
 import LoadingScreen from './LoadingScreen';
 import './Home.css';
+import './OspreyWelcome.css';
+import osprey0 from './pixel-bird-0.png';
+import osprey1 from './pixel-bird-1.png';
+import osprey2 from './pixel-bird-2.png';
+import osprey3 from './pixel-bird-3.png';
+import osprey4 from './pixel-bird-4.png';
+
+  const OspreyWelcome = () => {
+  const [frameIndex, setFrameIndex] = useState(0);    
+  const frames = [osprey0, osprey1, osprey2, osprey3, osprey4];
+
+  useEffect(() => {
+    const flapInterval = setInterval(() => {
+      setFrameIndex((prev) => (prev + 1) % frames.length);
+    }, 100);
+    return () => clearInterval(flapInterval); 
+  }, [frames.length]);
+
+  return (
+    <div className="osec-intro-container">
+      <img 
+        src={frames[frameIndex]} 
+        alt="Flapping Osprey" 
+        className="osprey-sprite-flying" 
+      />
+    </div>
+  );
+};
 
 function Home() {
+  /*
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,9 +45,11 @@ function Home() {
   if (loading) {
     return <LoadingScreen onLoadComplete={() => setLoading(false)} />;
   }
+ */
 
   return (
-    <body>
+    <div className="home-wrapper">
+      <OspreyWelcome />
       <header class="site-header">
         <nav class="nav-bar">
         <div class="nav-logo">
@@ -37,7 +68,7 @@ function Home() {
 
         <main>
       <section id="Content">
-        <h1>We're developing a better website. Back soon!</h1>
+        <h1>Welcome to Osprey Security!</h1>
         <img src="images/OSECLogoFullNoBG1.png" alt="" class="osec-logo"></img>
           <p>(Current improvements in progress)</p>
     </section>
@@ -65,7 +96,7 @@ function Home() {
       <p>Sponsored by UNF Student Government</p>
       </footer>
 
-    </body>
+    </div>
   );
 
 }

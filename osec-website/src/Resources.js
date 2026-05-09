@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import LoadingScreen from './LoadingScreen';
-import './Resources.css';
+import './resources.css';
 
 function App() {
   const [loading, setLoading] = useState(false);
