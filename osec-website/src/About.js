@@ -3,6 +3,7 @@ import LoadingScreen from './LoadingScreen';
 import './About.css';
 
 function About() {
+  /*
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function About() {
   if (loading) {
     return <LoadingScreen onLoadComplete={() => setLoading(false)} />;
   }
+    */
 
   return (
     <body>

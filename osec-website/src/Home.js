@@ -21,11 +21,7 @@ import osprey4 from './pixel-bird-4.png';
 
   return (
     <div className="osec-intro-container">
-      <img 
-        src={frames[frameIndex]} 
-        alt="Flapping Osprey" 
-        className="osprey-sprite-flying" 
-      />
+      <img src={frames[frameIndex]} alt="Flapping Osprey" className="osprey-sprite-flying" />
     </div>
   );
 };
@@ -70,7 +66,7 @@ function Home() {
       <section id="Content">
         <h1>Welcome to Osprey Security!</h1>
         <img src="images/OSECLogoFullNoBG1.png" alt="" class="osec-logo"></img>
-          <p>(Current improvements in progress)</p>
+          <p>We are the leading cybersecurity club at University of North Florida (UNF). We bring in industry speakers to discuss trending topics in the field, compete in national competitions, and have opportunities for hands on learning with our research lab.</p>
     </section>
 
     <section id="Story">
