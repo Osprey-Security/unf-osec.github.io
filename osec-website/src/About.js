@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import LoadingScreen from './LoadingScreen';
 import './About.css';
+import osecGlitch from './OSECLogoGlitched.gif';
 
 function About() {
   /*
@@ -22,25 +23,25 @@ function About() {
   return (
     <body>
       <header class="site-header">
-        <nav class="nav-bar">
+        
         <div class="nav-logo">
           <a href="index.html"><img src="images/OSEC_plain.png" alt=""></img>
           </a>
         </div>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="About.html" class="nav-link">About Us</a>
-          <a href="Resources.html" class="nav-link">Resources</a>
+          <a href="/" class="nav-link-button">Home</a>
+          <a href="/About" class="nav-link-button">About Us</a>
+          <a href="/Resources" class="nav-link-button">Resources</a>
         </div>
 
         <a href="https://discord.gg/McZz3KtDp4" target="_blank" class="nav-discord-button">Join Discord</a>        
-      </nav>
+      
         </header>
 
         <main>
             <section id="about-section">
             <h1>About Us</h1>
-            <img src="images/OSECLogoFullNoBG1.png" alt="" class="osec-logo"></img>
+            <img src={osecGlitch} alt="" class="osec-logo"></img>
             <h2>Meet the Officers!</h2> 
                 <h3>Current Officers for Spring 2026:</h3>
                     <p>Faculty Advisor: Larry Snedden </p>

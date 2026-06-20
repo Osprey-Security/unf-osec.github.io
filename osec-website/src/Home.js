@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import LoadingScreen from './LoadingScreen';
+//import LoadingScreen from './LoadingScreen';
 import './Home.css';
 import './OspreyWelcome.css';
 import osprey0 from './pixel-bird-0.png';
@@ -7,6 +7,7 @@ import osprey1 from './pixel-bird-1.png';
 import osprey2 from './pixel-bird-2.png';
 import osprey3 from './pixel-bird-3.png';
 import osprey4 from './pixel-bird-4.png';
+import osecGlitch from './OSECLogoGlitched.gif';
 
   const OspreyWelcome = () => {
   const [frameIndex, setFrameIndex] = useState(0);    
@@ -44,37 +45,49 @@ function Home() {
  */
 
   return (
+
+    /*
     <div className="home-wrapper">
       <OspreyWelcome />
-      <header class="site-header">
-        <nav class="nav-bar">
-        <div class="nav-logo">
-          <a href="index.html"><img src="images/OSEC_plain.png" alt=""></img>
-          </a>
-        </div>
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="About.html" class="nav-link">About Us</a>
-          <a href="Resources.html" class="nav-link">Resources</a>
-        </div>
+    */
+   
+    <div className="home-container">
+      <header className="site-header">
+        
+          <div className="nav-logo">
+            <a href="/"><img src="images/OSEC_plain.png" alt=""></img>
+            </a>
+          </div>
+            
+          <div className="nav-links">
+            <a href="/" className="nav-link-button">Home</a>
+            <a href="/about" className="nav-link-button">About Us</a>
+            <a href="/resources" className="nav-link-button">Resources</a>
+          </div>
 
-        <a href="https://discord.gg/McZz3KtDp4" target="_blank" class="nav-discord-button">Join Discord</a>        
-      </nav>
-        </header>
+          <div className="nav-discord">
+            <a href="https://discord.gg/McZz3KtDp4" target="_blank" className="nav-discord-button">Join Discord</a>
+          </div>
+        
+      </header>
 
+      <div className="home-wrapper">
+        <OspreyWelcome />
         <main>
-      <section id="Content">
-        <h1>Welcome to Osprey Security!</h1>
-        <img src="images/OSECLogoFullNoBG1.png" alt="" class="osec-logo"></img>
-          <p>We are the leading cybersecurity club at University of North Florida (UNF). We bring in industry speakers to discuss trending topics in the field, compete in national competitions, and have opportunities for hands on learning with our research lab.</p>
-    </section>
+          <section id="Content">
+            <h1>Welcome to Osprey Security!</h1>
+              <img src={osecGlitch} alt="" className="osec-logo"></img>
+              <p>We are the leading cybersecurity club at University of North Florida (UNF). We bring in industry speakers to discuss trending topics in the field, compete in national competitions, and have opportunities for hands on learning with our research lab.</p>
+          </section>
 
-    <section id="Story">
-      <h1>Our Story</h1>
-      <p>Osprey Security (OSEC) started as Association for Information Technology Professionals (AITP). Since then we have grown dramatically! We are a group of highly motivated, aspiring technology professionals, looking to improve everyday. We compete in cybersecurity competitions including CCDC, CPTC, and NCAE. In Spring 2023 our CCDC team made school history by reaching nationals! We are committed to helping UNF students from any background or major gain experience in IT. Go Ospreys!</p>
-    </section>
+          <section id="Story">
+            <h1>Our Story</h1>
+              <p>Osprey Security (OSEC) started as Association for Information Technology Professionals (AITP). Since then we have grown dramatically! We are a group of highly motivated, aspiring technology professionals, looking to improve everyday. We compete in cybersecurity competitions including CCDC, CPTC, and NCAE. In Spring 2023 our CCDC team made school history by reaching nationals! We are committed to helping UNF students from any background or major gain experience in IT. Go Ospreys!</p>
+          </section>
+        </main>
 
-    </main>
+      </div>
+        
 
     <footer>
       <h2>Connect With Us</h2>

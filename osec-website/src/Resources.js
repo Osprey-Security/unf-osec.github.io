@@ -20,19 +20,19 @@ function App() {
   return (
     <body>
       <header class="site-header">
-        <nav class="nav-bar">
+        
         <div class="nav-logo">
           <a href="index.html"><img src="images/OSEC_plain.png" alt=""></img>
           </a>
         </div>
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="About.html" class="nav-link">About Us</a>
-          <a href="Resources.html" class="nav-link">Resources</a>
+          <a href="/" class="nav-link-button">Home</a>
+          <a href="/About" class="nav-link-button">About Us</a>
+          <a href="/Resources" class="nav-link-button">Resources</a>
         </div>
 
         <a href="https://discord.gg/McZz3KtDp4" target="_blank" class="nav-discord-button">Join Discord</a>        
-      </nav>
+      
         </header>
 
     <main>
